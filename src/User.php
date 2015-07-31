@@ -23,6 +23,26 @@ class User implements \ArrayAccess
         $this->container = $array;
     }
 
+    public function __get($offset)
+    {
+        return $this->offsetGet($offset);
+    }
+
+    public function __set($offset, $value)
+    {
+        $this->offsetSet($offset, $value);
+    }
+
+    public function __isset($offset)
+    {
+        return $this->offsetExists($offset);
+    }
+
+    public function __unset($offset)
+    {
+        $this->offsetUnset($offset);
+    }
+
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
