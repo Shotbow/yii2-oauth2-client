@@ -10,6 +10,7 @@
     }
   ],
   "require": {
+    "php": ">=5.4",
     "yiisoft/yii2-authclient": "~2.0"
   },
   "autoload": {
