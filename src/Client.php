@@ -1,4 +1,5 @@
 <?php
+
 namespace Shotbow\Auth;
 
 use Yii;
@@ -6,16 +7,17 @@ use yii\authclient\OAuth2;
 
 class Client extends OAuth2
 {
-    /** @inheritdoc */
+    /** {@inheritdoc} */
     public $authUrl = 'https://shotbow.net/forum/oauth2';
-    /** @inheritdoc */
+    /** {@inheritdoc} */
     public $tokenUrl = 'https://shotbow.net/forum/oauth2/access_token';
-    /** @inheritdoc */
+    /** {@inheritdoc} */
     public $apiBaseUrl = 'https://shotbow.net/forum/oauth2';
 
     /**
-     * @return User
      * @throws \yii\base\Exception
+     *
+     * @return User
      */
     protected function initUserAttributes()
     {
@@ -23,7 +25,7 @@ class Client extends OAuth2
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function buildAuthUrl(array $params = [])
     {
@@ -31,7 +33,7 @@ class Client extends OAuth2
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getReturnUrl()
     {

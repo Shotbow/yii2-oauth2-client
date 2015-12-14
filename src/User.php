@@ -1,8 +1,9 @@
 <?php
+
 namespace Shotbow\Auth;
 
 /**
- * Class User
+ * Class User.
  *
  * @property string $owner_id    Xenforo User ID
  * @property string $owner_type
@@ -12,7 +13,6 @@ namespace Shotbow\Auth;
  * @property string $username    Last known Minecraft Username/Shotbow Username
  * @property array  $scopes      Scope information
  * @property string $minecraftId Minecraft UUID (dashless)
- * @package Shotbow\Auth
  */
 class User implements \ArrayAccess
 {
